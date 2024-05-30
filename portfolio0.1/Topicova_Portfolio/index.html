@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .item1 {
+      grid-area: photo;
+      margin-left: -18%;
+    }
+
+    .item1 img {
+      width: 307px; /* Set the width to 200 pixels */
+      height: 410px; /* Set the height to 200 pixels */
+      object-fit: cover; /* Maintain aspect ratio and cover the entire space */
+      height: auto;
+    }
+
+    .item2 {
+      grid-area: contact;
+      background-color: rgb(248, 246, 242);
+
+      margin-top: 98px;
+    }
+
+    .item3 {
+      grid-area: education;
+      background-color: rgb(217, 217, 217);
+      margin-top: 98px;
+    }
+
+    .item4 {
+      grid-area: info;
+      text-align: left;
+      background-color: rgb(217, 217, 217);
+      margin-left: 5%;
+    }
+
+    .item4 p {
+      grid-area: info;
+      text-align: left;
+      background-color: rgb(217, 217, 217);
+      margin-left: 40px;
+      line-height: 5px;
+      word-spacing: -2px;
+    }
+
+    .item5 {
+      grid-area: skills;
+      background-color: rgb(248, 246, 242);
+    }
+
+    .item1_1 {
+      grid-area: txt1;
+
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
+    .item1_1 p {
+      font-size: 15pt;
+      word-spacing: -2px;
+      line-height: 1.2;
+      text-align: left;
+    }
+
+    .item2_1 {
+      grid-area: txt2;
+
+      margin-left: 300px;
+
+      background-color: rgb(248, 246, 242);
+    }
+
+    .item2_1 p {
+      font-size: 15pt;
+      text-align: left;
+      margin-left: 50px;
+    }
+
+    .item3_1 {
+      grid-area: txt3;
+
+      margin-left: 180px;
+      background-color: rgb(31, 31, 31);
+    }
+
+    .item3_1 p {
+      text-align: left;
+      font-size: 15pt;
+      color: white;
+      margin-left: 180px;
+    }
+
+    .item4_1 {
+      grid-area: image_1;
+      text-align: left;
+    }
+
+    .item4_1 img {
+      max-width: 100%;
+      height: auto;
+
+      width: 215px; /* Set the width to 200 pixels */
+      height: 476px; /* Set the height to 200 pixels */
+    }
+
+    .item1_2 {
+      grid-area: image_1_2;
+    }
+    .item1_2 img {
+      width: 293px;
+      height: 633;
+      margin-top: 300px;
+    }
+
+    .item2_2 {
+      grid-area: image_2_2;
+    }
+
+    .item2_2 img {
+      width: 293px;
+      height: 633;
+    }
+
+    .item3_2 {
+      grid-area: image_3_2;
+    }
+
+    .item3_2 {
+      width: 293px;
+      height: 633;
+    }
+
+    .item4_2 {
+      grid-area: image_4_2;
+      text-align: left;
+    }
+
+    .item4_2 img {
+      width: 293px;
+      height: 633;
+      margin-top: 300px;
+    }
+
+    .item4_2 img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .item1_3 {
+      grid-area: image_1_3;
+    }
+
+    .item1_3 img {
+      height: auto;
+      width: 322px;
+      height: 699px;
+      border: 2px solid black;
+    }
+
+    .item2_3 {
+      grid-area: image_2_3;
+    }
+
+    .item2_3 img {
+      height: auto;
+      width: 322px;
+      height: 699px;
+      border: 2px solid black;
+    }
+
+    .item3_3 {
+      grid-area: image_3_3;
+    }
+
+    .item3_3 img {
+      height: auto;
+      width: 322px;
+      height: 699px;
+      border: 2px solid black;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+        "photo contact education"
+        "info info skills";
+      column-gap: 3%; /* Adjust this value as needed */
+      row-gap: 3%;
+    }
+
+    .grid-container > div {
+      text-align: center;
+      font-size: 10px;
+    }
+
+    .grid-container_1 {
+      display: grid;
+      grid-template-areas:
+        "txt1 txt1 image_1"
+        "txt2 txt2 image_1"
+        "txt3 txt3 image_1";
+      column-gap: 1%; /* Adjust this value as needed */
+
+      align-items: stretch; /* Stretch items to fill container vertically */
+      align-content: stretch; /* Stretch items in both rows */
+    }
+
+    .grid-container_1 > div {
+      text-align: center;
+
+      display: flex;
+      flex-direction: column; /* Stack content vertically */
+    }
+
+    .grid-container_2 {
+      display: grid;
+      grid-template-areas:
+        "image_1_2 image_2_2  image_4_2"
+        "image_1_2 image_3_2  image_4_2";
+
+      column-gap: 2%; /* Adjust this value as needed */
+      row-gap: 2%;
+      align-items: stretch; /* Stretch items to fill container vertically */
+      align-content: stretch; /* Stretch items in both rows */
+    }
+
+    .grid-container_2 > div {
+      text-align: center;
+
+      display: flex;
+      flex-direction: column; /* Stack content vertically */
+    }
+
+    .grid-container_3 {
+      display: grid;
+      grid-template-areas: "image_1_3 image_2_3  image_3_3";
+      margin-top: 150px;
+      column-gap: 10px;
+      align-items: stretch; /* Stretch items to fill container vertically */
+      align-content: stretch; /* Stretch items in both rows */
+    }
+
+    .grid-container_3 > div {
+      text-align: center;
+
+      display: flex;
+      flex-direction: column; /* Stack content vertically */
+    }
+
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.7);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+    }
+
+    .navbar nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: flex-start;
+      padding-left: 1rem;
+    }
+
+    .navbar nav ul li {
+      margin: 0 1rem;
+    }
+
+    .navbar nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      padding: 1rem;
+      display: block;
+    }
+
+    .navbar nav ul li a:hover {
+      background-color: rgba(255, 127, 80, 0.7);
+      border-radius: 5px;
+    }
+
+    .hero {
+      background-image: url("https://example.com/background.jpg"); /* Replace with your background image URL */
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+      padding-top: 60px; /* Offset for fixed navbar */
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* Add a dark overlay */
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-title {
+      font-size: 4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-button {
+      background-color: #ff7f50;
+      color: white;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: background-color 0.3s;
+    }
+
+    .hero-button:hover {
+      background-color: #ff6347;
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .section:nth-of-type(even) {
+      background-color: #fff;
+    }
+
+    .center {
+      text-align: center;
+      margin-top: -10px;
+      font-size: 15pt;
+    }
+
+    .left {
+      text-align: left;
+      margin-left: 20px;
+      font-size: 15pt;
+    }
+
+    .icon-text {
+      display: flex;
+      align-items: center;
+    }
+
+    .icon-text i {
+      font-size: 15pt;
+      margin-right: 10px;
+    }
+
+    .icon-text p {
+      font-size: 15pt;
+    }
+
+    .text-info p {
+      text-align: left;
+      padding-top: 15px;
+      margin-left: 80px;
+      font-size: 15pt;
+    }
+
+    .line-container {
+      padding: 100px 0; /* 50px of padding above and below the line */
+      text-align: center; /* Center the line horizontally */
+    }
+
+    .full-width-line {
+      border: none;
+      border-top: 1px solid #000; /* Adjust the color and thickness as needed */
+      width: calc(100% - 100px); /* Subtract 100px for the combined padding */
+    }
+
+    .container {
+      position: relative;
+      text-align: left;
+      color: white;
+    }
+
+    .top-left {
+      position: absolute;
+      top: 1px;
+      left: 500px;
+      color: black;
+    }
+
+    .top-left1 {
+      position: absolute;
+      top: 150px;
+      left: 300px;
+      color: black;
+    }
+
+    .top-left2 {
+      position: absolute;
+      top: 350px;
+      left: 300px;
+      color: black;
+    }
+
+    .centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .highlight {
+      color: rgb(197, 138, 123);
+    }
+
+    .grid-container_2 {
+      margin-left: 50px;
+    }
+
+    .cuisine-compas-text {
+      font-size: 15pt;
+    }
+  </style>
+  <body>
+    <header class="navbar">
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">My Portfolio</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="home" class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">UX/UI Designer</h1>
+        <p class="hero-subtitle">Štěpánka Topičová</p>
+        <a href="#contact" class="hero-button">Hire me!</a>
+      </div>
+    </div>
+
+    <section id="about" class="section">
+      <div class="grid-container">
+        <div class="item1">
+          <img src="resources/profil_picture.jpg" alt="Profile Picture" />
+        </div>
+        <div class="item2">
+          <div class="center">
+            <h1>CONTACT</h1>
+          </div>
+          <div class="left">
+            <div class="icon-text">
+              <i class="fa-brands fa-linkedin"></i>
+              <p>Štěpánka Topičová</p>
+            </div>
+            <div class="icon-text">
+              <i class="fa-sharp fa-solid fa-phone"></i>
+              <p>+420 604474843</p>
+            </div>
+            <div class="icon-text">
+              <i class="fa-solid fa-envelope"></i>
+              <p>topicovastepanka@gmail.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="item3">
+          <div class="center">
+            <h1>EDUCATION</h1>
+          </div>
+          <div class="left">
+            <div class="icon-text">
+              <p>Certificate - UX/UI design</p>
+            </div>
+            <div class="icon-text">
+              <p>University College of Northern Denmark</p>
+            </div>
+            <div class="icon-text">
+              <p>High school - business academy</p>
+            </div>
+          </div>
+        </div>
+        <div class="item4">
+          <div class="text-info">
+            <p>
+              <b
+                ><i>I am Štěpánka, a UX/UI designer based in Brno, in the</i></b
+              >
+            </p>
+            <p>
+              <i><b>Czech Republic.</b></i>
+            </p>
+            <br />
+            <p style="padding-left: 50px">
+              I am working in Figma. I am creating wireframes,
+            </p>
+            <p style="padding-left: 50px">
+              mood boards and story mapping. I do create
+            </p>
+            <p style="padding-left: 50px">personas and brief.</p>
+            <br />
+            <p>I attend a course where I was able to gain skills and</p>
+            <p>knowlage about UX/UI desig. I specialise in creating</p>
+            <p>visual ppealing designs that prioritise seamless user</p>
+            <p>experience.</p>
+          </div>
+        </div>
+        <div class="item5">
+          <div class="text-info">
+            <div class="center">
+              <h1>SKILLS</h1>
+            </div>
+            <p>UX/UI desgin - Figma</p>
+            <p>Story mapping</p>
+            <p>Crating motherboards</p>
+            <p>Wireframes</p>
+            <p>Prototypes</p>
+            <p>Mockups</p>
+            <p>Communication</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="line-container">
+      <hr class="full-width-line" />
+    </div>
+
+    <section id="projects" class="section">
+      <h2 style="margin-top: -110px">My Potfolio</h2>
+      <div
+        class="grid-container_1"
+        style="margin-top: 100px; margin-left: 50px"
+      >
+        <div class="item1_1">
+          <i
+            ><b
+              ><p>
+                Core Music began with a simple idea: to<br />
+                celebrate the diversity of music.
+              </p></b
+            ></i
+          >
+        </div>
+        <div class="item2_1">
+          <p>
+            I wanted to create a space where every genre,<br />
+            from jazz to hip-hop, could coexist<br />
+            harmoniously. The welcome screen captures<br />
+            this spirit, with images of musicians from<br />
+            different genres and backgrounds.<br />
+            <br />
+            The neon Rolling Stones logo serves as a<br />
+            tribute to the timeless influence of music<br />
+            legends, symbolizing the bridge detween the<br />
+            past and the future.
+          </p>
+        </div>
+        <div class="item3_1">
+          <p>
+            Core Music is more than a platform; it's a<br />
+            celebration of the world's musical tapestry.
+          </p>
+        </div>
+        <div class="item4_1">
+          <img src="resources/msc.png" />
+        </div>
+      </div>
+
+      <div class="grid-container_3" style="margin-left: 50px">
+        <div class="item1_3">
+          <img src="resources/music_1.png" />
+        </div>
+        <div class="item2_3">
+          <img src="resources/music_2.png" />
+        </div>
+        <div class="item3_3">
+          <img src="resources/music_3.png" />
+        </div>
+      </div>
+
+      <div class="line-container">
+        <hr class="full-width-line" />
+      </div>
+
+      <div
+        class="eldora-header"
+        style="margin-left: 50px; text-align: left; font-size: 15pt"
+      >
+        <p>
+          <b
+            >ARCANE REALMS:<br />
+            CHRONICLES OF ELDORA</b
+          >
+        </p>
+      </div>
+
+      <div
+        class="eldora-text"
+        style="
+          margin-left: 50px;
+          text-align: left;
+          font-size: 15pt;
+          padding-left: 80px;
+          padding-top: 10px;
+        "
+      >
+        <p>
+          <i
+            >In the mystica/ land of <b>Eldoria</b>, where every breeze hummed
+            with<br />
+            magic and ancient secrets lingered in the shadows, a young<br />
+            orphan named <b>Elyra</b> stumbled upon a relic that would change<br />
+            <b>her fat and the fate of the world—forever.</b></i
+          >
+        </p>
+      </div>
+      <div class="eldora-img" style="padding-top: 70px">
+        <img src="resources/menu_1.png" />
+      </div>
+      <div
+        class="eldora-text-1"
+        style="
+          margin-left: 50px;
+          text-align: left;
+          padding-top: 50px;
+          padding-left: 80px;
+          font-size: 15pt;
+        "
+      >
+        <p>
+          <i
+            >An ancient amu/et, inscribed with glowing runes, whispered to<br />
+            her of a long-forgotten destiny.</i
+          >
+        </p>
+      </div>
+
+      <div
+        class="eldora-text-2"
+        style="
+          margin-left: 50px;
+          text-align: left;
+          padding-left: 80px;
+          font-size: 15pt;
+        "
+      >
+        <p>
+          <i
+            ><b
+              >Eldoria was under threat from the malevolent sorcerer Malakar,<br />
+              and Elyra was the chosen one to stand against him.</b
+            ></i
+          >
+        </p>
+      </div>
+
+      <div
+        class="eldora-text-3"
+        style="
+          margin-left: 50px;
+          text-align: left;
+          font-size: 18pt;
+          padding-top: 50px;
+          padding-left: 400px;
+        "
+      >
+        <p>
+          But who is the player of the Arcane Realms<br />
+          Chronicles of Eldoria?
+        </p>
+      </div>
+
+      <div class="eldora-img-1" style="padding-top: 50px; margin-left: 50px">
+        <img src="resources/User_story_mapping.png" />
+      </div>
+
+      <div class="line-container">
+        <hr class="full-width-line" />
+      </div>
+
+      <div class="container" style="margin-left: 50px">
+        <img
+          src="resources/cuisine.png"
+          alt="Snow"
+          style="width: 293px; height: 633; margin-left: 100px"
+        />
+        <div
+          class="top-left"
+          style="font-size: 30pt; color: rgb(197, 138, 123)"
+        >
+          <b>Cuisine Compas</b>
+        </div>
+        <div class="top-left1" style="font-size: 15pt">
+          <p>
+            With a sleek design and user-friendly interface<br />
+            <span class="highlight">CuisineCompas</span> allows users to search
+            for<br />
+            restaurants by cuisine, location, and price.
+          </p>
+        </div>
+
+        <div class="top-left2" style="font-size: 15pt">
+          <p>
+            Each listing was meticulously curted, complete with<br />
+            mouthwatering photos and hones reviews. Whatever<br />
+            someone craved authentic Italian pasta or spicy<br />
+            Mexican tacos, <span class="highlight">CuisineCompas</span> has it
+            all.
+          </p>
+        </div>
+      </div>
+
+      <div class="cuisine-compas-text">
+        <p>
+          Every time someones opens
+          <span class="highlight">CuisineCompas</span>, they aren't just looking
+          for a<br />
+          place to eat - they are embarking on a jounrey to culinary bliss, one
+          bite at<br />
+          a time.
+        </p>
+      </div>
+
+      <div class="grid-container_2">
+        <div class="item1_2">
+          <img src="resources/uvod.png" />
+        </div>
+        <div class="item2_2">
+          <img src="resources/mísa.png" />
+        </div>
+        <div class="item3_2">
+          <img src="resources/interakcni_screen.png" />
+        </div>
+        <div class="item4_2">
+          <img src="resources/interakcni_screen_1.png" />
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top: 100px" class="section">
+      <h1>Contact information</h1>
+      <p>
+        topicovastepanka@gmail.com<br />
+        +420 604474843
+      </p>
+    </section>
+  </body>
+</html>
