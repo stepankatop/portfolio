@@ -1,0 +1,237 @@
+.full-width-line {
+  border: none;
+  border-top: 1px solid var(--black-color-light);
+  /* opacity: 0.1; */
+  width: calc(100% - 4rem);
+  margin-top: -1rem;
+}
+.full-width-line-no-ofset {
+  width: 100%;
+}
+
+/* core music part */
+
+.projects-music-info {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  grid-template-areas: "music-info-texts music-info-img";
+  gap: 2rem;
+  row-gap: 0;
+}
+
+.projects-music-texts {
+  grid-area: music-info-texts;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 1.2rem;
+  color: var(--black-color);
+}
+
+.music-info-img {
+  grid-area: music-info-img;
+  text-align: left;
+
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.music-info-img:hover {
+  transform: scale(1.05);
+}
+
+.projects-music-info-header {
+  font-size: 1.2rem;
+  font-weight: 700;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.projects-music-info-header h2 {
+  margin-top: 0;
+  font-size: var(--h1-font-size);
+}
+
+.projects-music-info-text {
+  width: 100%;
+  max-width: 450px;
+  background-color: var(--white-color);
+  padding: 2rem;
+}
+
+.projects-music-info-text-italics {
+  font-style: italic;
+  opacity: 0.95;
+}
+
+.projects-music-info-note {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1rem;
+  padding-left: 4rem;
+  background-color: var(--black-color);
+  color: white;
+  font-style: italic;
+}
+
+.projects-music-images {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.music-img {
+  grid-area: music-img-1;
+
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+
+  padding: 1rem;
+  border: 1px solid var(--black-color-light);
+
+  transition: transform 0.3s ease-in-out;
+}
+
+.music-img:hover {
+  transform: scale(1.05);
+  border: none;
+}
+
+/* eldora */
+
+.eldora-header h2 {
+  margin-top: 0;
+  font-size: var(--h1-font-size);
+}
+
+.eldora-text {
+  margin-left: 4rem;
+  font-size: 1.2rem;
+  font-style: italic;
+  max-width: 50ch;
+}
+
+.eldora-img {
+  margin-top: 2rem;
+  width: 100%;
+
+  transition: transform 0.3s ease;
+}
+
+.eldora-img:hover {
+  transform: scale(1.05);
+}
+
+.eldora-text-bottom {
+  margin-left: 4rem;
+  margin-top: 3rem;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+.eldora-text-player {
+  margin-left: 8rem;
+  margin-top: 5rem;
+  font-style: normal;
+  font-size: 1.5rem;
+}
+
+.eldora-img-player {
+  margin-bottom: 3rem;
+}
+
+.eldora-img-player img {
+  width: 100%;
+
+  transition: transform 0.3s ease;
+}
+
+.eldora-img-player img:hover {
+  transform: scale(1.05);
+}
+
+/* cuisine */
+
+.highlight {
+  color: var(--cuisine-color);
+}
+
+.cuisine-container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 4rem;
+}
+
+.cuisine-top-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-height: 530px;
+
+  transition: transform 0.3s ease;
+}
+
+.cuisine-top-img:hover {
+  transform: scale(1.05);
+}
+
+.cuisine-header {
+  font-size: var(--h1-font-size);
+  margin-top: 0;
+  color: var(--cuisine-color);
+}
+
+.cuisine-texts p {
+  font-size: 1.2rem;
+  max-width: 50ch;
+}
+
+.cuisine-text-stronger {
+  font-weight: 500;
+}
+.cuisine-text-italic {
+  font-style: italic;
+}
+
+.cuisine-text-note {
+  box-sizing: border-box;
+  background-color: var(--cuisine-color-light);
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+.cuisine-images {
+  display: grid;
+  grid-template-columns: 293px 293px 293px;
+  gap: 2rem;
+  place-items: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.cuisine-images-center {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.cuisine-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.cuisine-images img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
+    0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
+    0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
+}

@@ -10,328 +10,274 @@
     />
   </head>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style-navbar.css" />
+  <link rel="stylesheet" href="style-hero.css" />
+  <link rel="stylesheet" href="style-about.css" />
+  <link rel="stylesheet" href="style-projects.css" />
+
   <body>
     <header class="navbar">
-      <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">My Portfolio</a></li>
-        </ul>
-      </nav>
+      <div class="wrap">
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">My Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <div id="home" class="hero">
-      <div class="hero-content">
-        <h1 class="hero-title">UX/UI Designer</h1>
-        <p class="hero-subtitle">Štěpánka Topičová</p>
-        <a href="#contact" class="hero-button">Hire me!</a>
-      </div>
-    </div>
-
-    <section id="about" class="section">
-      <div class="grid-container">
-        <div class="item1">
-          <img src="resources/profil_picture.jpg" alt="Profile Picture" />
-        </div>
-        <div class="item2">
-          <div class="center">
-            <h1>CONTACT</h1>
-          </div>
-          <div class="left">
-            <div class="icon-text">
-              <i class="fa-brands fa-linkedin"></i>
-              <p>Štěpánka Topičová</p>
-            </div>
-            <div class="icon-text">
-              <i class="fa-sharp fa-solid fa-phone"></i>
-              <p>+420 604474843</p>
-            </div>
-            <div class="icon-text">
-              <i class="fa-solid fa-envelope"></i>
-              <p>topicovastepanka@gmail.com</p>
-            </div>
-          </div>
-        </div>
-        <div class="item3">
-          <div class="center">
-            <h1>EDUCATION</h1>
-          </div>
-          <div class="left">
-            <div class="icon-text">
-              <p>Certificate - UX/UI design</p>
-            </div>
-            <div class="icon-text">
-              <p>University College of Northern Denmark</p>
-            </div>
-            <div class="icon-text">
-              <p>High school - business academy</p>
-            </div>
-          </div>
-        </div>
-        <div class="item4">
-          <div class="text-info">
-            <p>
-              <b
-                ><i>I am Štěpánka, a UX/UI designer based in Brno, in the</i></b
-              >
-            </p>
-            <p>
-              <i><b>Czech Republic.</b></i>
-            </p>
-            <br />
-            <p style="padding-left: 50px">
-              I am working in Figma. I am creating wireframes,
-            </p>
-            <p style="padding-left: 50px">
-              mood boards and story mapping. I do create
-            </p>
-            <p style="padding-left: 50px">personas and brief.</p>
-            <br />
-            <p>I attend a course where I was able to gain skills and</p>
-            <p>knowlage about UX/UI desig. I specialise in creating</p>
-            <p>visual ppealing designs that prioritise seamless user</p>
-            <p>experience.</p>
-          </div>
-        </div>
-        <div class="item5">
-          <div class="text-info">
-            <div class="center">
-              <h1>SKILLS</h1>
-            </div>
-            <p>UX/UI desgin - Figma</p>
-            <p>Story mapping</p>
-            <p>Crating motherboards</p>
-            <p>Wireframes</p>
-            <p>Prototypes</p>
-            <p>Mockups</p>
-            <p>Communication</p>
-          </div>
+    <section id="home" class="hero">
+      <div class="wrap">
+        <div class="hero-content">
+          <h1 class="hero-title">UX/UI Designer</h1>
+          <p class="hero-subtitle">Štěpánka Topičová</p>
+          <a href="#contact" class="hero-button">Hire me!</a>
         </div>
       </div>
     </section>
-    <div class="line-container">
+
+    <div class="wrap">
+      <section id="about" class="section">
+        <div class="about-grid-container">
+          <div class="about-item-picture">
+            <img src="resources/profil_picture.jpg" alt="Profile Picture" />
+          </div>
+          <div class="about-item-header">
+            <h1 class="with-background-line">
+              <span>Štěpánka, UX/UI designer</span>
+            </h1>
+          </div>
+          <div class="about-item-contact">
+            <h2>Contact</h2>
+
+            <a
+              href="https://www.linkedin.com/in/%C5%A1t%C4%9Bp%C3%A1nka-topi%C4%8Dov%C3%A1-5b5677229/"
+              class="about-icon-text"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+              <p>Štěpánka Topičová</p>
+            </a>
+            <a href="tel:00420604474843" class="about-icon-text">
+              <i class="fa-sharp fa-solid fa-phone"></i>
+              <p>+420 604 474 843</p>
+            </a>
+            <a href="mailto:topicovastepanka@gmail.com" class="about-icon-text">
+              <i class="fa-solid fa-envelope"></i>
+              <p>topicovastepanka<wbr />@gmail.com</p>
+            </a>
+          </div>
+          <div class="about-item-education">
+            <h2>Education</h2>
+
+            <ul>
+              <li>Certificate - UX/UI design</li>
+              <li>University College of Northern Denmark</li>
+              <li>High School - Business Academy</li>
+            </ul>
+          </div>
+          <div class="about-item-info">
+            <p class="about-info-highlighted">
+              I am Štěpánka, a UX/UI designer based in Brno, Czech Republic.
+            </p>
+            <p class="about-info-offset">
+              I work with Figma to create wireframes, moodboards, and story
+              maps. I also develop personas and briefs.
+            </p>
+            <p>
+              I attended a course where I gained skills and knowledge about
+              UX/UI design. I specialize in creating visually appealing designs
+              that prioritize a seamless user experience.
+            </p>
+          </div>
+          <div class="about-item-skills">
+            <h2>Skills</h2>
+
+            <ul>
+              <li>UX/UI desgin - Figma</li>
+              <li>Story mapping</li>
+              <li>Creating moodboards</li>
+              <li>Wireframes</li>
+              <li>Prototypes</li>
+              <li>Mockups</li>
+              <li>Communication</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       <hr class="full-width-line" />
     </div>
 
-    <section id="projects" class="section">
-      <h2 style="margin-top: -110px">My Portfolio</h2>
-      <div
-        class="grid-container_1"
-        style="margin-top: 100px; margin-left: 50px"
-      >
-        <div class="item1_1">
-          <i
-            ><b
-              ><p>
-                Core Music began with a simple idea: to<br />
-                celebrate the diversity of music.
-              </p></b
-            ></i
-          >
-        </div>
-        <div class="item2_1">
-          <p>
-            I wanted to create a space where every genre,<br />
-            from jazz to hip-hop, could coexist<br />
-            harmoniously. The welcome screen captures<br />
-            this spirit, with images of musicians from<br />
-            different genres and backgrounds.<br />
-            <br />
-            The neon Rolling Stones logo serves as a<br />
-            tribute to the timeless influence of music<br />
-            legends, symbolizing the bridge detween the<br />
-            past and the future.
-          </p>
-        </div>
-        <div class="item3_1">
-          <p>
-            Core Music is more than a platform; it's a<br />
-            celebration of the world's musical tapestry.
-          </p>
-        </div>
-        <div class="item4_1">
-          <img src="resources/msc.png" />
+    <section id="projects">
+      <div class="wrap">
+        <div class="section section-music">
+          <div class="projects-music-info">
+            <div class="projects-music-texts">
+              <div class="projects-music-info-header">
+                <h2>My Portfolio</h2>
+                <p>
+                  Core Music began with a simple idea:<br />
+                  to celebrate the diversity of music.
+                </p>
+              </div>
+              <div class="projects-music-info-text">
+                <p>
+                  I wanted to create a space where every genre, from jazz to
+                  hip-hop, could coexist harmoniously. The welcome screen
+                  captures this spirit, featuring images of musicians from
+                  different genres and backgrounds.
+                </p>
+                <p class="projects-music-info-text-italics">
+                  The neon Rolling Stones logo serves as a tribute to the
+                  timeless influence of music legends, symbolizing the bridge
+                  between the past and the future.
+                </p>
+              </div>
+              <div class="projects-music-info-note">
+                <p>
+                  Core Music is more than a platform; it's a<br />
+                  celebration of the world's musical tapestry.
+                </p>
+              </div>
+            </div>
+            <img src="resources/msc.png" class="music-info-img" />
+          </div>
         </div>
       </div>
 
-      <div class="grid-container_3" style="margin-left: 50px">
-        <div class="item1_3">
-          <img src="resources/music_1.png" />
-        </div>
-        <div class="item2_3">
-          <img src="resources/music_2.png" />
-        </div>
-        <div class="item3_3">
-          <img src="resources/music_3.png" />
-        </div>
+      <div class="projects-music-images">
+        <img src="resources/music_1.png" alt="music-img" />
+        <img src="resources/music_2.png" alt="music-img" />
+        <img src="resources/music_3.png" alt="music-img" />
       </div>
 
-      <div class="line-container">
-        <hr class="full-width-line" />
-      </div>
-
-      <div
-        class="eldora-header"
-        style="margin-left: 50px; text-align: left; font-size: 15pt"
-      >
-        <p>
-          <b
-            >ARCANE REALMS:<br />
-            CHRONICLES OF ELDORA</b
-          >
-        </p>
-      </div>
-
-      <div
-        class="eldora-text"
-        style="
-          margin-left: 50px;
-          text-align: left;
-          font-size: 15pt;
-          padding-left: 80px;
-          padding-top: 10px;
-        "
-      >
-        <p>
-          <i
-            >In the mystica/ land of <b>Eldoria</b>, where every breeze hummed
-            with<br />
-            magic and ancient secrets lingered in the shadows, a young<br />
-            orphan named <b>Elyra</b> stumbled upon a relic that would change<br />
-            <b>her fat and the fate of the world—forever.</b></i
-          >
-        </p>
-      </div>
-      <div class="eldora-img" style="padding-top: 70px">
-        <img src="resources/menu_1.png" />
-      </div>
-      <div
-        class="eldora-text-1"
-        style="
-          margin-left: 50px;
-          text-align: left;
-          padding-top: 50px;
-          padding-left: 80px;
-          font-size: 15pt;
-        "
-      >
-        <p>
-          <i
-            >An ancient amu/et, inscribed with glowing runes, whispered to<br />
-            her of a long-forgotten destiny.</i
-          >
-        </p>
-      </div>
-
-      <div
-        class="eldora-text-2"
-        style="
-          margin-left: 50px;
-          text-align: left;
-          padding-left: 80px;
-          font-size: 15pt;
-        "
-      >
-        <p>
-          <i
-            ><b
-              >Eldoria was under threat from the malevolent sorcerer Malakar,<br />
-              and Elyra was the chosen one to stand against him.</b
-            ></i
-          >
-        </p>
-      </div>
-
-      <div
-        class="eldora-text-3"
-        style="
-          margin-left: 50px;
-          text-align: left;
-          font-size: 18pt;
-          padding-top: 50px;
-          padding-left: 400px;
-        "
-      >
-        <p>
-          But who is the player of the Arcane Realms<br />
-          Chronicles of Eldoria?
-        </p>
-      </div>
-
-      <div class="eldora-img-1" style="padding-top: 50px; margin-left: 50px">
-        <img src="resources/User_story_mapping.png" />
-      </div>
-
-      <div class="line-container">
-        <hr class="full-width-line" />
-      </div>
-
-      <div class="container" style="margin-left: 50px">
-        <img
-          src="resources/cuisine.png"
-          alt="Snow"
-          style="width: 293px; height: 633; margin-left: 100px"
-        />
-        <div
-          class="top-left"
-          style="font-size: 30pt; color: rgb(197, 138, 123)"
-        >
-          <b>Cuisine Compas</b>
-        </div>
-        <div class="top-left1" style="font-size: 15pt">
-          <p>
-            With a sleek design and user-friendly interface<br />
-            <span class="highlight">CuisineCompas</span> allows users to search
-            for<br />
-            restaurants by cuisine, location, and price.
-          </p>
+      <div class="wrap">
+        <div class="section">
+          <hr class="full-width-line full-width-line-no-ofset" />
         </div>
 
-        <div class="top-left2" style="font-size: 15pt">
-          <p>
-            Each listing was meticulously curted, complete with<br />
-            mouthwatering photos and hones reviews. Whatever<br />
-            someone craved authentic Italian pasta or spicy<br />
-            Mexican tacos, <span class="highlight">CuisineCompas</span> has it
-            all.
-          </p>
+        <div class="section section-eldora section-no-padding-top">
+          <div class="eldora-header">
+            <h2>
+              ARCANE REALMS:<br />
+              CHRONICLES OF ELDORA
+            </h2>
+          </div>
+
+          <div class="eldora-text">
+            <p>
+              In the mystical land of <strong>Eldoria</strong>, where every
+              breeze hummed with magic and ancient secrets lingered in the
+              shadows, a young orphan named <strong>Elyra</strong> stumbled upon
+              a relic that would change
+              <strong>her fate — and the fate of the world — forever.</strong>
+            </p>
+          </div>
+
+          <img class="eldora-img" src="resources/menu_1.png" alt="eldora-img" />
+
+          <div class="eldora-text-bottom">
+            <p>
+              An ancient amulet, inscribed with glowing runes, whispered to<br />
+              her of a long-forgotten destiny.
+            </p>
+            <p>
+              <strong>
+                Eldoria was under threat from the malevolent sorcerer
+                Malakar,<br />
+                and Elyra was the chosen one to stand against him.
+              </strong>
+            </p>
+          </div>
+
+          <div class="eldora-text-player">
+            <h3>
+              But who is the player of the Arcane Realms<br />
+              Chronicles of Eldoria?
+            </h3>
+          </div>
+
+          <div class="eldora-img-player">
+            <img
+              src="resources/User_story_mapping.png"
+              alt="eldora-img-player"
+            />
+          </div>
+
+          <hr class="full-width-line" />
+        </div>
+
+        <div class="section section-cuisine">
+          <div class="cuisine-container">
+            <img
+              class="cuisine-top-img"
+              src="resources/cuisine.png"
+              alt="Snow"
+            />
+            <div class="cuisine-texts">
+              <h2 class="cuisine-header">Cuisine Compas</h2>
+              <p class="cuisine-text-stronger">
+                With a sleek design and user-friendly interface
+                <span class="highlight">CuisineCompas</span> allows users to
+                search for restaurants by cuisine, location, and price.
+              </p>
+              <p class="cuisine-text-italic">
+                Each listing was meticulously curted, complete with
+                mouthwatering photos and hones reviews. Whatever someone craved
+                authentic Italian pasta or spicy Mexican tacos,
+                <span class="highlight">CuisineCompas</span> has it all.
+              </p>
+              <p class="cuisine-text-note">
+                Every time someones opens
+                <span class="highlight">CuisineCompas</span>, they aren't just
+                looking for a place to eat - they are embarking on a jounrey to
+                culinary bliss, one bite at a time.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="cuisine-compas-text">
-        <p>
-          Every time someones opens
-          <span class="highlight">CuisineCompas</span>, they aren't just looking
-          for a<br />
-          place to eat - they are embarking on a jounrey to culinary bliss, one
-          bite at<br />
-          a time.
-        </p>
-      </div>
-
-      <div class="grid-container_2">
-        <div class="item1_2">
-          <img src="resources/uvod.png" />
+      <div class="cuisine-images">
+        <div class="cuisine-images-left">
+          <img src="resources/uvod.png" alt="cuisine-images" />
         </div>
-        <div class="item2_2">
+        <div class="cuisine-images-center">
           <img src="resources/mísa.png" />
+          <img src="resources/interakcni_screen.png" alt="cuisine-images" />
         </div>
-        <div class="item3_2">
-          <img src="resources/interakcni_screen.png" />
+        <div class="cuisine-images-right">
+          <img src="resources/interakcni_screen_1.png" alt="cuisine-images" />
         </div>
-        <div class="item4_2">
-          <img src="resources/interakcni_screen_1.png" />
+      </div>
+
+      <div class="wrap">
+        <div class="section">
+          <hr class="full-width-line" />
         </div>
       </div>
     </section>
 
-    <section id="contact" style="margin-top: 100px" class="section">
-      <h1>Contact information</h1>
-      <p>
-        topicovastepanka@gmail.com<br />
-        +420 604474843
-      </p>
+    <section id="contact">
+      <div class="wrap">
+        <div class="section section-contact">
+          <div class="contact-box">
+            <h2>Contact information</h2>
+
+            <ul class="contact-list">
+              <li>
+                <a href="mailto:topicovastepanka@gmail.com">
+                  topicovastepanka@gmail.com</a
+                >
+              </li>
+              <li><a href="tel:00420604474843">+420 604 474 843</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
   </body>
 </html>

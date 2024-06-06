@@ -1,0 +1,115 @@
+.hero {
+  background-image: url("https://example.com/background.jpg"); /* Replace with your background image URL */
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  height: calc(100vh - 60px); /* Subtract the height of the fixed navbar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  padding-top: 60px; /* Offset for fixed navbar */
+
+  background: rgba(234, 234, 234, 0.5);
+  /* animované pozadí */
+  background: linear-gradient(
+    -45deg,
+    hsl(14, 10%, 63%),
+    hsl(337, 5%, 57%),
+    hsl(196, 5%, 49%),
+    hsl(166, 5%, 49%)
+  );
+  background-size: 400% 400%;
+  animation: gradient 12s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-button {
+  background-color: #ff7f50;
+  color: white;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  /* border-radius: 5px; */ /* všude používáte hranaté rohy, tak bych je ani zde nedával */
+  font-size: 1rem;
+  transition: background-color 0.3s;
+  display: inline-block;
+  animation: wave 1s 1s, pulsating 4s 2.5s infinite;
+}
+
+.hero-button:hover {
+  background-color: #ff6347;
+  /* stop animation */
+  animation-play-state: paused;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0);
+  }
+  10% {
+    transform: rotate(7deg);
+  }
+  20% {
+    transform: rotate(-4deg);
+  }
+  30% {
+    transform: rotate(7deg);
+  }
+  40% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  60% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes pulsating {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 127, 80, 0.7);
+  }
+  50% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(255, 127, 80, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 127, 80, 0);
+  }
+}

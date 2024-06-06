@@ -1,438 +1,80 @@
+/* styl je rozdělený do více souborů pro přehlednost */
+/* viz soubory style-navbar.css, style-hero.css, style-about.css apod. */
+
+/* proměnné pro barvy a texty */
+:root {
+  --primary-color: #ff7f50;
+  --primary-color-hover: #ff6347;
+  --white-color: rgb(248, 246, 242);
+  --gray-color: rgb(217, 217, 217);
+  --black-color: hsl(0, 0%, 22%);
+  --black-color-light: hsl(0, 0%, 92%);
+  --cuisine-color: rgb(197, 138, 123);
+  --cuisine-color-light: hsl(12, 39%, 93%);
+  --h1-font-size: 2rem;
+}
+
 body,
 html {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  scroll-behavior: smooth; /* plynulé scrollování, funguje hlavně při kliku na něco v menu */
+  font-size: 16px;
+  color: var(--black-color);
 }
 
-.item1 {
-  grid-area: photo;
-  margin-left: -18%;
-}
-
-.item1 img {
-  width: 307px; /* Set the width to 200 pixels */
-  height: 410px; /* Set the height to 200 pixels */
-  object-fit: cover; /* Maintain aspect ratio and cover the entire space */
-  height: auto;
-}
-
-.item2 {
-  grid-area: contact;
-  background-color: rgb(248, 246, 242);
-
-  margin-top: 98px;
-}
-
-.item3 {
-  grid-area: education;
-  background-color: rgb(217, 217, 217);
-  margin-top: 98px;
-}
-
-.item4 {
-  grid-area: info;
-  text-align: left;
-  background-color: rgb(217, 217, 217);
-  margin-left: 5%;
-}
-
-.item4 p {
-  grid-area: info;
-  text-align: left;
-  background-color: rgb(217, 217, 217);
-  margin-left: 40px;
-  line-height: 5px;
-  word-spacing: -2px;
-}
-
-.item5 {
-  grid-area: skills;
-  background-color: rgb(248, 246, 242);
-}
-
-.item1_1 {
-  grid-area: txt1;
-
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-
-.item1_1 p {
-  font-size: 15pt;
-  word-spacing: -2px;
-  line-height: 1.2;
-  text-align: left;
-}
-
-.item2_1 {
-  grid-area: txt2;
-
-  margin-left: 300px;
-
-  background-color: rgb(248, 246, 242);
-}
-
-.item2_1 p {
-  font-size: 15pt;
-  text-align: left;
-  margin-left: 50px;
-}
-
-.item3_1 {
-  grid-area: txt3;
-
-  margin-left: 180px;
-  background-color: rgb(31, 31, 31);
-}
-
-.item3_1 p {
-  text-align: left;
-  font-size: 15pt;
-  color: white;
-  margin-left: 180px;
-}
-
-.item4_1 {
-  grid-area: image_1;
-  text-align: left;
-}
-
-.item4_1 img {
-  max-width: 100%;
-  height: auto;
-
-  width: 215px; /* Set the width to 200 pixels */
-  height: 476px; /* Set the height to 200 pixels */
-}
-
-.item1_2 {
-  grid-area: image_1_2;
-}
-.item1_2 img {
-  width: 293px;
-  height: 633;
-  margin-top: 300px;
-}
-
-.item2_2 {
-  grid-area: image_2_2;
-}
-
-.item2_2 img {
-  width: 293px;
-  height: 633;
-}
-
-.item3_2 {
-  grid-area: image_3_2;
-}
-
-.item3_2 {
-  width: 293px;
-  height: 633;
-}
-
-.item4_2 {
-  grid-area: image_4_2;
-  text-align: left;
-}
-
-.item4_2 img {
-  width: 293px;
-  height: 633;
-  margin-top: 300px;
-}
-
-.item4_2 img {
-  max-width: 100%;
-  height: auto;
-}
-
-.item1_3 {
-  grid-area: image_1_3;
-}
-
-.item1_3 img {
-  height: auto;
-  width: 322px;
-  height: 699px;
-  border: 2px solid black;
-}
-
-.item2_3 {
-  grid-area: image_2_3;
-}
-
-.item2_3 img {
-  height: auto;
-  width: 322px;
-  height: 699px;
-  border: 2px solid black;
-}
-
-.item3_3 {
-  grid-area: image_3_3;
-}
-
-.item3_3 img {
-  height: auto;
-  width: 322px;
-  height: 699px;
-  border: 2px solid black;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-areas:
-    "photo contact education"
-    "info info skills";
-  column-gap: 3%; /* Adjust this value as needed */
-  row-gap: 3%;
-}
-
-.grid-container > div {
-  text-align: center;
-  font-size: 10px;
-}
-
-.grid-container_1 {
-  display: grid;
-  grid-template-areas:
-    "txt1 txt1 image_1"
-    "txt2 txt2 image_1"
-    "txt3 txt3 image_1";
-  column-gap: 1%; /* Adjust this value as needed */
-
-  align-items: stretch; /* Stretch items to fill container vertically */
-  align-content: stretch; /* Stretch items in both rows */
-}
-
-.grid-container_1 > div {
-  text-align: center;
-
-  display: flex;
-  flex-direction: column; /* Stack content vertically */
-}
-
-.grid-container_2 {
-  display: grid;
-  grid-template-areas:
-    "image_1_2 image_2_2  image_4_2"
-    "image_1_2 image_3_2  image_4_2";
-
-  column-gap: 2%; /* Adjust this value as needed */
-  row-gap: 2%;
-  align-items: stretch; /* Stretch items to fill container vertically */
-  align-content: stretch; /* Stretch items in both rows */
-}
-
-.grid-container_2 > div {
-  text-align: center;
-
-  display: flex;
-  flex-direction: column; /* Stack content vertically */
-}
-
-.grid-container_3 {
-  display: grid;
-  grid-template-areas: "image_1_3 image_2_3  image_3_3";
-  margin-top: 150px;
-  column-gap: 10px;
-  align-items: stretch; /* Stretch items to fill container vertically */
-  align-content: stretch; /* Stretch items in both rows */
-}
-
-.grid-container_3 > div {
-  text-align: center;
-
-  display: flex;
-  flex-direction: column; /* Stack content vertically */
-}
-
-.navbar {
-  background-color: rgba(0, 0, 0, 0.7);
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 10;
-}
-
-.navbar nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: flex-start;
-  padding-left: 1rem;
-}
-
-.navbar nav ul li {
-  margin: 0 1rem;
-}
-
-.navbar nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 1rem;
-  padding: 1rem;
-  display: block;
-}
-
-.navbar nav ul li a:hover {
-  background-color: rgba(255, 127, 80, 0.7);
-  border-radius: 5px;
-}
-
-.hero {
-  background-image: url("https://example.com/background.jpg"); /* Replace with your background image URL */
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  position: relative;
-  padding-top: 60px; /* Offset for fixed navbar */
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Add a dark overlay */
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-}
-
-.hero-title {
-  font-size: 4rem;
-  margin-bottom: 0.5rem;
-}
-
-.hero-subtitle {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.hero-button {
-  background-color: #ff7f50;
-  color: white;
-  padding: 1rem 2rem;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  transition: background-color 0.3s;
-}
-
-.hero-button:hover {
-  background-color: #ff6347;
+.wrap {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .section {
   padding: 4rem 2rem;
+}
+
+.section-no-padding-top {
+  padding-top: 0;
+}
+
+#contact h2 {
+  font-size: var(--h1-font-size);
+  margin-top: 0;
+}
+
+#contact a {
+  color: black;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  color: #ff7f50;
+}
+
+.section-contact {
+  display: grid;
+  place-items: center;
+  margin-bottom: 4rem;
+}
+
+.contact-list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.contact-list li {
+  margin-bottom: 1rem;
+}
+
+.contact-list li:last-child {
+  margin-bottom: 0;
+}
+
+.contact-box {
+  background-color: var(--white-color);
+  padding: 3rem 4rem;
+  font-size: 1.4rem;
   text-align: center;
-}
-
-.section:nth-of-type(even) {
-  background-color: #fff;
-}
-
-.center {
-  text-align: center;
-  margin-top: -10px;
-  font-size: 15pt;
-}
-
-.left {
-  text-align: left;
-  margin-left: 20px;
-  font-size: 15pt;
-}
-
-.icon-text {
-  display: flex;
-  align-items: center;
-}
-
-.icon-text i {
-  font-size: 15pt;
-  margin-right: 10px;
-}
-
-.icon-text p {
-  font-size: 15pt;
-}
-
-.text-info p {
-  text-align: left;
-  padding-top: 15px;
-  margin-left: 80px;
-  font-size: 15pt;
-}
-
-.line-container {
-  padding: 100px 0; /* 50px of padding above and below the line */
-  text-align: center; /* Center the line horizontally */
-}
-
-.full-width-line {
-  border: none;
-  border-top: 1px solid #000; /* Adjust the color and thickness as needed */
-  width: calc(100% - 100px); /* Subtract 100px for the combined padding */
-}
-
-.container {
-  position: relative;
-  text-align: left;
-  color: white;
-}
-
-.top-left {
-  position: absolute;
-  top: 1px;
-  left: 500px;
-  color: black;
-}
-
-.top-left1 {
-  position: absolute;
-  top: 150px;
-  left: 300px;
-  color: black;
-}
-
-.top-left2 {
-  position: absolute;
-  top: 350px;
-  left: 300px;
-  color: black;
-}
-
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.highlight {
-  color: rgb(197, 138, 123);
-}
-
-.grid-container_2 {
-  margin-left: 50px;
-}
-
-.cuisine-compas-text {
-  font-size: 15pt;
 }
