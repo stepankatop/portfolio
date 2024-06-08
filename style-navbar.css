@@ -16,7 +16,6 @@
 }
 
 .navbar nav ul li {
-  /* margin: 0 1rem;*/ /* nedoporučuji, na odkazy se hůře kliká */
   margin: 0;
 }
 
@@ -31,5 +30,4 @@
 
 .navbar nav ul li a:hover {
   background-color: var(--primary-color);
-  /* border-radius: 5px;  */ /* to bych zde nedával, trochu to v designu ruší */
 }

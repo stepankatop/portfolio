@@ -1,7 +1,7 @@
 .full-width-line {
   border: none;
   border-top: 1px solid var(--black-color-light);
-  /* opacity: 0.1; */
+ 
   width: calc(100% - 4rem);
   margin-top: -1rem;
 }
@@ -9,7 +9,6 @@
   width: 100%;
 }
 
-/* core music part */
 
 .projects-music-info {
   display: grid;
@@ -103,7 +102,6 @@
   border: none;
 }
 
-/* eldora */
 
 .eldora-header h2 {
   margin-top: 0;
@@ -156,7 +154,6 @@
   transform: scale(1.05);
 }
 
-/* cuisine */
 
 .highlight {
   color: var(--cuisine-color);

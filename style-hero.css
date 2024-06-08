@@ -1,20 +1,20 @@
 .hero {
-  background-image: url("https://example.com/background.jpg"); /* Replace with your background image URL */
+  background-image: url("https://example.com/background.jpg"); 
   background-size: cover;
   background-position: center;
   width: 100%;
   height: 100vh;
-  height: calc(100vh - 60px); /* Subtract the height of the fixed navbar */
+  height: calc(100vh - 60px); 
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
   position: relative;
-  padding-top: 60px; /* Offset for fixed navbar */
+  padding-top: 60px; 
 
   background: rgba(234, 234, 234, 0.5);
-  /* animované pozadí */
+
   background: linear-gradient(
     -45deg,
     hsl(14, 10%, 63%),
@@ -59,7 +59,6 @@
   color: white;
   padding: 1rem 2rem;
   text-decoration: none;
-  /* border-radius: 5px; */ /* všude používáte hranaté rohy, tak bych je ani zde nedával */
   font-size: 1rem;
   transition: background-color 0.3s;
   display: inline-block;
@@ -68,7 +67,7 @@
 
 .hero-button:hover {
   background-color: #ff6347;
-  /* stop animation */
+ 
   animation-play-state: paused;
 }
 
